@@ -23,7 +23,6 @@ const userData: Partial<IUser>[] = [
       expirationDate: "12/25",
       cvv: "123",
     },
-    favorates: [],
   },
   {
     fullName: "Jane Smith",
@@ -37,7 +36,6 @@ const userData: Partial<IUser>[] = [
       expirationDate: "06/27",
       cvv: "456",
     },
-    favorates: [],
   },
   {
     fullName: "Sam Johnson",
@@ -51,7 +49,6 @@ const userData: Partial<IUser>[] = [
       expirationDate: "09/30",
       cvv: "789",
     },
-    favorates: [],
   },
 ];
 
