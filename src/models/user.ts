@@ -14,7 +14,7 @@ export interface IUser extends Document {
   avatar: string;
   address: string;
   paymentInfo: IPaymentInfo;
-  favorates: string[];
+  favorites: string[];
 }
 
 const PaymentInfoSchema: Schema = new Schema({
@@ -26,12 +26,12 @@ const PaymentInfoSchema: Schema = new Schema({
 
 const UserSchema: Schema = new Schema({
   fullName: { type: String, required: true },
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   avatar: { type: String, required: true },
   address: { type: String, required: true },
   paymentInfo: { type: PaymentInfoSchema, required: true },
-  favorates: { type: [String], required: true },
+  favorites: { type: [String], required: true },
 });
 
 const User = mongoose.model<IUser>("User", UserSchema);
